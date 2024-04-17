@@ -1,0 +1,70 @@
+import {Person} from "../model/cards/Person";
+import {Hobby} from "../model/cards/Hobby";
+
+export const employees: Person[] = [
+    {
+        name: {en: 'Onboarding specialist'},
+        effects: [{effectType: "BUDGET", value: 2}, {effectType: "BUY_TO_DECK", value: 1}],
+        triggeredAbilities: [],
+        text: {},
+        flavorText: {},
+        cost: 2,
+        skills: {creativity: 0, knowledge: 0, organization: 0},
+        prestige: 0,
+    },
+    {
+        name: {en: 'Empath'},
+        effects: [],
+        triggeredAbilities: [
+            {triggerTypes: [Hobby.OUTDOOR], effect: {effectType: 'KNOWLEDGE', value: 4}},
+            {triggerTypes: [Hobby.BOARDGAMES], effect: {effectType: 'ORGANIZATION', value: 2}},
+            {triggerTypes: [Hobby.MUSIC], effect: {effectType: 'CREATIVITY', value: 4}},
+        ],
+        text: {},
+        flavorText: {},
+        cost: 2,
+        skills: {creativity: 0, knowledge: 0, organization: 0},
+        prestige: 0,
+    },
+    {
+        name: {en: 'Mentor'},
+        effects: [{effectType: 'TRAINING', value: 3}],
+        triggeredAbilities: [],
+        text: {},
+        flavorText: {},
+        cost: 3,
+        skills: {creativity: 0, knowledge: 3, organization: 1},
+        prestige: 0,
+    },
+    {
+        name: {en: 'HR manager'},
+        effects: [{effectType: 'BUDGET', value: 2}, {effectType: 'DISMISS', value: 1}],
+        triggeredAbilities: [],
+        text: {},
+        flavorText: {},
+        cost: 4,
+        skills: {creativity: 1, knowledge: 0, organization: 3},
+        prestige: 0,
+    },
+    {
+        name: {en: 'Product Owner'},
+        effects: [{effectType: 'DRAW_UNTIL_PERSON', value: 1}],
+        triggeredAbilities: [],
+        text: {},
+        flavorText: {},
+        cost: 6,
+        skills: {creativity: 1, knowledge: 1, organization: 4},
+        prestige: 0,
+    },
+    {
+        name: {en: 'Insider'},
+        effects: [{effectType: 'SCOUT_CONTRACTS', value: 5}, {effectType: 'PURGE_CONTRACT', value: 2}],
+        triggeredAbilities: [],
+        text: {},
+        flavorText: {},
+        cost: 3,
+        skills: {creativity: 0, knowledge: 0, organization: 2},
+        prestige: 0,
+    },
+
+]
