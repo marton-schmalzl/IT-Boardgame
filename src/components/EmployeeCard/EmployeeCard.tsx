@@ -10,7 +10,7 @@ function EmployeeCard(props: { employee: Person }) {
     return <div className={'employeeCard'}>
         <>
             <span>{tr(props.employee.name)}</span>
-            {props.employee.effects.map(effect =>
+            {props.employee.effects?.map(effect =>
                 <div><EffectRenderer effect={effect}/></div>
             )}
             {props.employee.triggeredAbilities.map(ability =>

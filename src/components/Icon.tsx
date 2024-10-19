@@ -2,6 +2,7 @@ import React from 'react';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {
   faBook,
+  faCheckSquare,
   faDiceD20,
   faLightbulb,
   faMoneyBill,
@@ -12,7 +13,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import {EffectType} from "../model/cards/Effect";
 import {Hobby} from "../model/cards/Hobby";
-import {TriggerTypes} from "../model/cards/TriggeredAbility";
+import {TaskCompletion, TriggerTypes} from "../model/cards/TriggeredAbility";
 
 type IconTags = EffectType|Hobby|TriggerTypes|'TRIGGER_ICON';
 function Icon(props: {tag: IconTags }) {
@@ -48,19 +49,6 @@ function getIcon(props: {tag: IconTags}) {
       break;
     case "FIRST_RECRUITMENT_DISCOUNT":
       break;
-    case "ENTERTAINMENT_BONUS_SP":
-      break;
-    case "MANUFACTURING_BONUS_SP":
-      break;
-    case "HEALTHCARE_BONUS_SP":
-      break;
-    case "ENTERTAINMENT_SKILL_BONUS":
-      break;
-    case "MANUFACTURING_SKILL_BONUS":
-      break;
-    case "HEALTHCARE_SKILL_BONUS":
-      break;
-
     case Hobby.OUTDOOR:
       return <FontAwesomeIcon icon={faMountainSun}/>;
     case Hobby.MUSIC:
@@ -69,8 +57,8 @@ function getIcon(props: {tag: IconTags}) {
       return <FontAwesomeIcon icon={faDiceD20}/>;
     case Hobby.ALL:
       break;
-
-
+    case TaskCompletion:
+      return <FontAwesomeIcon icon={faCheckSquare}/>
   }
   return <></>
 }

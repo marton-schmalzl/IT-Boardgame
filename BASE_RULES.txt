@@ -1,0 +1,38 @@
+DEV_GAME
+
+The goal of the game is to earn the most PRESTIGE by the end of the game. There are multiple ways to earn PRESTIGE: some EMPLOYEE or ITEM cards have an end of game PRESITGE value printed on them. <insert end_of_game_prestige icon here> These are counted only at the end of the game. Some effects give immediate PRESTIGE, when these are activated move up on the PRESITGE track by the appropiate number of spaces <insert immediate_prestige icon here>.
+The bulk of your PRESTIGE will come from completing projects. During the game you will complete ASSIGNMENTS, gaining PROGRESS points on the PROJECT TRACK. Once your deck runs out you perform a PROJECT RELEASE and you score PRESITGE based on how much PROGRESS you made on your PROJECT TRACK. The PRJECT TRACK has PRESTIGE values printed alongside it, increasing in a non-linear fashion. On the early spaces you might only increase PRESTIGE by one every 2-3 space, then later down track each progress point will give you one or even multiple PRESITGE. If you max out the PROJECT TRACK (this shouldn't happen often, only in the late game and should require specialezed decks to achive) your project becomes so big it is now considered a GOVERNMENT PROJECT. You no longer earn more PRESTIGE, you start printing MONEY instead.
+The game itself plays as a deck building game. You have a starting deck, consitsing of a CEO, and INTERNS. You will hire EMPLOYEES and buy ITEMS to increase the effectiveness of your EMPLOYEES. The EMPLOYEES are split into three groups: PRODUCTION EMPLOYEES and ADMINISTRATIVE EMPLOYEES each with 2 levels: JUNIOR and SENIOR, and PRESITGE EMPLOYEES. Each of the 5 total EMPLOYEE variants have their own deck.
+You buy EMPLOYEES from the MARKET by paying their COST, then putting them into your DISCARD pile. The MARKET has multiple slots for each EMPLOYEE variant, which are refilled from the appropiate deck when purchased. (Most likely 2x2 slots for JUNIORS, 2x3 slots for SENIORS, and a single slot for PRESITGE EMPLOYEES). 
+
+PRODUCTION EMPLOYEES are your main workforce, they will be mainly completing ASSIGNMENTS. They have 3 main STATS with differing values: CREATIVITY, TECHNICAL SKILL, and ORGANIZATION. Some of them also contain abilites, either ON PLAY ABILITIES, which activate immediatly when played, and CONDITIONAL ABILITIES, which activate when certain requirements are met. These are usually related to completeing ASSIGNMENTS, helping you earn PROGRESS, or develop TECHNOLIGES
+ADMINISTRATIVE EMPLOYEES generally help you improve your workforce. They usually provide BUDGET to help pay for the COST of market cards. They may have ON PLAY ABILITES and CONDITIONAL ABILITES, but they are often related to buying more ITEMS and EMPLOYEES, manipulating the MARKET and ASSIGNMENT decks, or helping you in other ways, without directly contributing to your PROJECT PROGRESS.
+PRESTIGE EMPLOYEES do very little, if anything at all, and usually have high COST, but they all earn PRESTIGE at the end of the game.
+You can also buy ITEMS from the market. They can't be played on their own, they have to be EQUIPPED to an EMPLOYEE. Each EMPLOYEE can EQUIP 1 item. ITEMS usually give fairly weak effects for their price, but they don't count against your EMPLOYEE limit, making the opportunity cost of having them in your deck very low.
+
+On your turn you will be PLAYING EMPLOYEE CARDS from your hand, in any order you choose, immediately activating their ON PLAY EFFECT. Cards remain in play until the end of the turn, unless discarded. When PLAYING an EMPLOYEE, you can choose to EQUIP them with an ITEM from your hand, adding its effects to the EMPLOYEE.
+You can ASSIGN PRODUCTION EMPLOYEES to ASSIGNMENTS, potentially multiple EMPLOYEES to the same ASSIGNMENT, in order to meet it's REQUIREMENTS. When an ASSIGMENT is COMPLETED, it's effects are immediately resolved, put all EMPLOYEES and ITEMS assigned to it into your discard pile, and move the completed ASSIGMENT to it's appropiate place (detailed below).
+
+ASSIGNMENTS are split into two categories: FEATURE and TECHNOLOGY. Both ASSIGNMENT types have REQUIREMENTS in the three main STATS. You can complete an
+ASSIGMENT by assigning EMPLOYEES to it, with combined STAT values in each category meeting or exceeding the REQUIREMENT STAT of the appropiate type.
+FEATURES are your main way of earning PROGRESS towards your current PROJECT. They usually have high PROGRESS values, and sometimes have one time bonuses on COMPLETION. After COMPLETING an ASSIGNMENT, move it to your COMPLETED ASSIGNMENTS pile.
+TECHNOLIGES provide ongoing benefits. They contribute little, if any PROGRESS to your current PROJECT, but they have powerful ONCE PER TURN ABILITIES, or ONGOING EFFECTS to help you in your further endeavors. These cards are split into 2 halves, a top and a bottom half, each potentially containing abilites. The significance of this comes into play when deciding what to do with a COMPLETED TECHNOLOGY.
+When you COMPLETE a TECHNOLOGY, you can choose to keep it for yourself, placing it into your play area, permanently gaining both halves of the card, or you can publish it as OPEN SOURCE TECHNOLOGY. OPEN SOURCING a technology earns you immediate PRESTIGE points, but it makes it available to use by all players. When placing down an OPEN SOURCE technology, put it down so it covers the bottom half of the current top card among the OPEN SOURCE TECHNOLOGIES. Only the newest technology provides full bonus, older TECHNOLOGIES have their bottom half covered up by newer TECHNOLIGES, so only the top half is available.
+
+When you are done PLAYING CARDS and ASSIGNING EMPLOYEES, proceed to cleanup.
+
+DISCARD any cards IN PLAY. DISCARD any ITEMS still in hand. You may DISCARD any remaining EMPLOYEE from your hand. If you choose to keep one or more EMPLOYEES in hand it incurs two penalties: 1, You must reveal any card left in hand to prove to the other players you didn't keep any ITEMS, while giving away potentially useful information. 2, Any EMPLOYEE kept will count against your EMPLOYEE LIMIT when drawing cards, resulting in drawing less cards.
+DRAW cards until you have 5 EMPLOYEES in hand. ITEMS don't count against this limit. If your hand contains more than 10 cards (5 EMPLOYEES and 6+ ITEMS), discard ITEMS until you have 10 cards. During your turn you may have more cards than the limit.
+
+If during your turn or your cleanup you need to draw a card but your deck is empty, shuffle your discard pile to form a new deck. If this happend, proceed to PROJECT RELEASE after CLEANUP.
+
+PROJECT RELEASE happens once all your EMPLOYEES had a chance to contribute, and your deck have run out. Score PRESTIGE based on your marker on the PROJECT track, then move it back to the first space. Resolve ON PROJECT RELEASE effects if there is any in the order of your choosing.
+
+GAME END can be triggered by multiple conditions:
+    - someone reaches the PRESTIGE POINT treshold (based on player count)
+    - the PRESTIGE EMPLOYEE deck runs out
+    - any 2 of the other MARKET decks run out (shouldn't be very common, more of a failsafe)
+    - either of the ASSIGMENT decks run out (shouldn't be very common, more of a failsafe)
+Proceed with play until the first player's turn would come up, then end the game. In case of any of the decks running out, no replacemnt is provided, the remaining players have to deal with it. At the end of the game, add upp all the END OF GAME PRESTIGE points in your deck, and add it to your current PRESITGE. This is your final score, highest score wins. In case of a tie, whoever completed more FEATURES wins.
+
+If a player ever generates a BUDGET of 50, they immediately win the game buy buying out the competition.

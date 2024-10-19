@@ -1,7 +1,8 @@
-import {JobType} from "./JobType";
+
 import {Industry} from "./Industry";
 import TranslatedString from "../TranslatedString";
 import {Effect} from "../cards/Effect";
+import { TriggeredAbility } from "../cards/TriggeredAbility";
 
 export interface Contract {
     name: TranslatedString,
@@ -14,7 +15,13 @@ export interface Contract {
     }
     storyPoints: number;
     sector: Industry;
-    type: JobType;
     completionEffects?: Effect[];
-    permanentEffects?: Effect[];
+}
+
+export interface Technology extends Contract {
+    openSourcePrestige?: number;
+    topEffects?: TriggeredAbility[];
+    topDescripition?: TranslatedString;
+    bottomeEffects?: TriggeredAbility[];
+    bottomDescripition?: TranslatedString;
 }
