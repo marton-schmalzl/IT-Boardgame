@@ -14,53 +14,55 @@ const skillIcons: { [key in keyof Stats]: string } = {
 };
 
 const ItemCard: React.FC<ItemCardProps> = ({ item }) => {
-    const renderSkillBar = (level: number) => (
-      <div className={styles.skillBar}>
-        {Array.from({ length: 7 }, (_, idx) => (
-          <div key={idx} className={idx < level ? styles.filled : ''}></div>
-        ))}
+  const renderSkillBar = (level: number) => (
+    <div className={styles.skillBar}>
+      {Array.from({ length: 7 }, (_, idx) => (
+        <div key={idx} className={idx < level ? styles.filled : ''}></div>
+      ))}
+    </div>
+  );
+
+  return (
+    <div className={styles.card}>
+      {/* Header with Item Title and Cost */}
+      <div className={styles.cardHeader}>
+        <div className={styles.jobTitle}>{item.name?.en}</div>
+        <div className={styles.price}>${item.cost}</div>
       </div>
-    );
-  
-    return (
-      <div className={styles.card}>
-        {/* Header with Item Title and Cost */}
-        <div className={styles.cardHeader}>
-          <div className={styles.jobTitle}>{item.name?.en}</div>
-          <div className={styles.price}>${item.cost}</div>
-        </div>
-  
-        {/* Content Section without the Name */}
-        <div className={styles.content}>
-          <div className={styles.infoLeft}>
-            {/* Background Information */}
-            <div className={`${styles.outlinedBox} ${styles.backgroundBox}`}>
-              <label htmlFor="background">Background</label>
-              <div className={styles.personalInfo}>
-                <div className={styles.flavorText}>{item.flavorText?.en}</div>
-              </div>
+
+      {/* Content Section without the Name */}
+      <div className={styles.content}>
+        <div className={styles.infoLeft}>
+          {/* Background Information */}
+          <div className={`${styles.outlinedBox} ${styles.backgroundBox}`}>
+            <label htmlFor="background">Background</label>
+            <div className={styles.personalInfo}>
+              <div className={styles.flavorText}>{item.flavorText?.en}</div>
             </div>
           </div>
-  
-          {/* Photo */}
-          <div className={styles.photo}>
-            <img
-              alt={'Item Image'}
-            />
-          </div>
         </div>
-  
-        {/* Description */}
-        <div className={`${styles.outlinedBox} ${styles.descriptionBox}`}>
-          <label htmlFor="description">Description</label>
-          <div className={styles.description}>{item.text?.en}</div>
+
+        {/* Photo */}
+        <div className={styles.photo}>
+          <img
+            src={"images/items/" + item.photoSrc}
+            alt={'Item'}
+          />
         </div>
-  
-        {/* Skills */}
+      </div>
+
+      {/* Description */}
+      <div className={`${styles.outlinedBox} ${styles.descriptionBox}`}>
+        <label htmlFor="description">Description</label>
+        <div className={styles.description}>{item.text?.en}</div>
+      </div>
+
+      {/* Skills */}
+      {(Object.entries(item.skills).filter(([_, level]) => level > 0)).length > 0 &&
         <div className={`${styles.outlinedBox} ${styles.skillContainer}`}>
           <label>Skills</label>
           <div className={styles.skills}>
-            {Object.entries(item.skills).map(([skillName, level]) => (
+            {Object.entries(item.skills).filter(([_, level]) => level > 0).map(([skillName, level]) => (
               <div className={styles.skillCategory} key={skillName}>
                 <div className={styles.skillIconContainer}>
                   <span className={styles.skillIcon}>
@@ -72,8 +74,9 @@ const ItemCard: React.FC<ItemCardProps> = ({ item }) => {
             ))}
           </div>
         </div>
-      </div>
-    );
-  };
-  
-  export default ItemCard;
+      }
+    </div>
+  );
+};
+
+export default ItemCard;

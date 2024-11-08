@@ -14,14 +14,20 @@ export interface Contract {
         organization: number;
     }
     storyPoints: number;
-    sector: Industry;
+    sector?: Industry;
     completionEffects?: Effect[];
+    photoSrc?: string;
 }
+
+export interface Feature extends Contract {
+    effectDescription?: TranslatedString;
+}
+
 
 export interface Technology extends Contract {
     openSourcePrestige?: number;
     topEffects?: TriggeredAbility[];
-    topDescripition?: TranslatedString;
-    bottomeEffects?: TriggeredAbility[];
-    bottomDescripition?: TranslatedString;
+    topDescription?: TranslatedString;
+    bottomEffects?: TriggeredAbility[];
+    bottomDescription?: TranslatedString;
 }

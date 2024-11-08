@@ -16,7 +16,7 @@ export class FeatureAssignment extends FeatureCompletion { }
 export class TechCompletion extends TaskCompletion { constructor(public openSource?: boolean, minStats?: Stats) { super(minStats) } }
 export class TechAssignment extends TechCompletion { }
 
-export type TriggerTypes = Hobby | "NONE" | "ON_PLAY" | "DESTROY" | "DISMISS" | "DISCARD" | "ALL_JUNIOR_TEAMMATES"
+export type TriggerTypes = Hobby | "NONE" | "ON_PLAY" | "DESTROY" | "DISMISS" | "DISCARD" | "ALL_JUNIOR_TEAMMATES" | "PROJECT_START"
     |TaskAssignment| FeatureCompletion | FeatureAssignment | TechCompletion | TechAssignment;
 export interface TriggeredAbility {
     triggerTypes: TriggerTypes[];

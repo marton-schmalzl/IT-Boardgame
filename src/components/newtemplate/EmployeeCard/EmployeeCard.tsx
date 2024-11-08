@@ -1,8 +1,8 @@
 import React from 'react';
-import './EmployeeCard.css';
+import styles from './EmployeeCard.module.css';
 import { Programmer } from '../../../model/cards/Person';
 import { Stats } from '../../../model/Stats';
-
+import classNames from 'classnames';
 
 interface EmployeeCardProps {
   employee: Programmer;
@@ -16,64 +16,74 @@ const skillIcons: { [key in keyof Stats]: string } = {
 
 const EmployeeCard: React.FC<EmployeeCardProps> = ({ employee }) => {
   const renderSkillBar = (level: number) => (
-    <div className="skill-bar">
+    <div className={styles['skill-bar']}>
       {Array.from({ length: 7 }, (_, idx) => (
-        <div key={idx} className={idx < level ? 'filled' : ''}></div>
+        <div
+          key={idx}
+          className={classNames({ [styles.filled]: idx < level })}
+        ></div>
       ))}
     </div>
   );
 
   return (
-    <div className="card">
+    <div className={styles.card}>
       {/* Header with Job Title and Cost */}
-      <div className="card-header">
-        <div className="job-title">{employee.title?.en}</div>
-        <div className="price">${employee.cost}</div>
+      <div className={styles['card-header']}>
+        <div className={styles['job-title']}>{employee.title?.en}</div>
+        <div className={styles.price}>${employee.cost}</div>
       </div>
 
       {/* Content Section */}
-      <div className="content">
-        <div className="info-left">
+      <div className={styles.content}>
+        <div className={styles['info-left']}>
           {/* Name Information */}
-          <div className="outlined-box">
+          <div className={styles['outlined-box']}>
             <label htmlFor="name">Name</label>
-            <div className="personal-info">
-              <div className="name">{employee.name?.en}</div>
+            <div className={styles['personal-info']}>
+              <div className={styles.name}>{employee.name?.en}</div>
             </div>
           </div>
 
           {/* Background Information */}
-          <div className="outlined-box background-box">
+          <div
+            className={classNames(
+              styles['outlined-box'],
+              styles['background-box']
+            )}
+          >
             <label htmlFor="background">Background</label>
-            <div className="personal-info">
-              <div className="flavor-text">{employee.flavorText?.en}</div>
+            <div className={styles['personal-info']}>
+              <div className={styles['flavor-text']}>
+                {employee.flavorText?.en}
+              </div>
             </div>
           </div>
         </div>
 
         {/* Photo */}
-        <div className="photo">
+        <div className={styles.photo}>
           <img
-
+            src={'images/product_team/' + employee.photoSrc}
             alt={'Employee Headshot'}
           />
         </div>
       </div>
 
       {/* Description */}
-      <div className="outlined-box description-box">
+      <div className={classNames(styles['outlined-box'], styles['description-box'])}>
         <label htmlFor="description">Description</label>
-        <div className="description">{employee.text?.en}</div>
+        <div className={styles.description}>{employee.text?.en}</div>
       </div>
 
       {/* Skills */}
-      <div className="outlined-box skill-container">
+      <div className={classNames(styles['outlined-box'], styles['skill-container'])}>
         <label>Skills</label>
-        <div className="skills">
+        <div className={styles.skills}>
           {Object.entries(employee.skills).map(([skillName, level]) => (
-            <div className="skill-category" key={skillName}>
-              <div className="skill-icon-container">
-                <span className="skill-icon">
+            <div className={styles['skill-category']} key={skillName}>
+              <div className={styles['skill-icon-container']}>
+                <span className={styles['skill-icon']}>
                   {skillIcons[skillName as keyof Stats]}
                 </span>
               </div>

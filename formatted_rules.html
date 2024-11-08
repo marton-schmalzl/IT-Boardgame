@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
+<style>
+body {
+  font-family: 'Source Code Pro', monospace;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f4f4;
+  margin: 20px;
+}
+
+h1, h2 {
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h2 {
+  margin-top: 30px;
+}
+
+strong {
+  font-weight: 600;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 40px;
+}
+</style>
+<title>DEV_GAME Rules</title>
+</head>
+<body>
+
+<h1>DEV_GAME</h1>
+
+<h2>Game Overview</h2>
+<p>In DEV_GAME, you are the CEO of a tech company striving for success in the competitive world of software development. Your goal is to earn the most <strong>Prestige</strong> by the end of the game.</p>
+
+<h2>Ways to Earn Prestige</h2>
+<ul>
+  <li><strong>End-of-Game Prestige:</strong> Some Employee and Item cards have an end-of-game Prestige value printed on them.  <img src="end_of_game_prestige_icon.png" alt="End of Game Prestige Icon"></li>
+  <li><strong>Immediate Prestige:</strong> Certain effects grant immediate Prestige. When activated, move your marker up on the Prestige track accordingly. <img src="immediate_prestige_icon.png" alt="Immediate Prestige Icon"></li>
+  <li><strong>Project Completion:</strong> Completing Projects is the primary way to earn Prestige.</li>
+</ul>
+
+<h2>Projects and the Project Track</h2>
+<ul>
+  <li><strong>Assignments:</strong> During the game, you complete Feature and Technology Assignments to gain Progress points on the Project Track.</li>
+  <li><strong>Project Release:</strong> When your deck runs out, you perform a Project Release and score Prestige based on your Progress on the Project Track. Prestige values are printed alongside the track and increase non-linearly.</li>
+  <li><strong>Government Project:</strong> If you max out the Project Track, your Project becomes a Government Project. You no longer earn Prestige but instead generate Money (which doesn't directly contribute to your victory).</li>
+</ul>
+
+<h2>Deck Building</h2>
+<p>DEV_GAME is a deck-building game where you start with a basic deck consisting of your CEO and Interns. You will hire Employees and buy Items to improve your company's performance.</p>
+
+<h2>Employee Types</h2>
+<ul>
+  <li><strong>Production Employees:</strong> These are your core workforce, responsible for completing Assignments. They have three stats: Creativity, Technical Skill, and Organization. They may also have On Play or Conditional abilities.
+    <ul>
+      <li>Junior Production Employees</li>
+      <li>Senior Production Employees</li>
+    </ul>
+  </li>
+  <li><strong>Administrative Employees:</strong> These Employees focus on improving your workforce and operations. They often provide Budget to help pay for Market cards. They may have On Play or Conditional abilities related to buying Items, manipulating the Market, etc.
+    <ul>
+      <li>Junior Administrative Employees</li>
+      <li>Senior Administrative Employees</li>
+    </ul>
+  </li>
+  <li><strong>Prestige Employees:</strong> These Employees have a high cost and limited in-game effects but provide significant end-of-game Prestige.</li>
+</ul>
+
+<h2>Items</h2>
+<p>Items must be equipped to an Employee to provide benefits. Each Employee can equip one Item.</p>
+
+<h2>Game Phases</h2>
+
+<h3>Main Phase</h3>
+<p>During your Main Phase, you may take the following actions in any order:</p>
+<ul>
+  <li><strong>Play Employee Cards:</strong> Play Employee cards from your hand, activating On Play effects immediately.</li>
+  <li><strong>Equip Items:</strong> When playing an Employee, you can choose to equip them with an Item from your hand.</li>
+  <li><strong>Activate Abilities:</strong> You are free to activate abilities of in-play cards in any order you choose. Abilities can be activated once per turn unless stated otherwise. </li>
+  <li><strong>Use Budget:</strong> Use available Budget to buy cards from the Market and add them to your discard pile.</li>
+  <li><strong>Assign Employees to Assignments:</strong> Assign Production Employees to Feature or Technology Assignments to meet their stat requirements.</li>
+  <li><strong>Complete Assignments:</strong> When an Assignment's requirements are met, resolve its effects, discard the assigned Employees and Items, and move the Assignment to its appropriate location.
+    <ul>
+      <li><strong>Features:</strong> Provide Progress towards your Project and may have one-time bonuses. Completed Features are moved to the Completed Assignments pile.</li>
+      <li><strong>Technologies:</strong> Provide ongoing benefits. You can keep completed Technologies for yourself, placing it in your play area to gain the benefits of both halves of the card, or Open Source them for immediate Prestige. When placing down an Open Source Technology, put it down so it covers the bottom half of the current top card among the Open Source Technologies. Only the newest technology provides full bonus, older Technologies have their bottom half covered up by newer Technologies, so only the top half is available.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3>Cleanup Phase</h3>
+<ol>
+  <li>Discard cards in play and any Items remaining in your hand.</li>
+  <li>You may discard any remaining Employees from your hand. If you keep any Employees, you must reveal them and they count against your Employee limit when drawing cards.</li>
+  <li>Draw cards until you have 5 Employees in hand. If your hand exceeds 10 cards, discard Items until you have 10 cards.</li>
+</ol>
+
+<h3>Project Release Phase</h3>
+<p>Triggered if your deck is empty during your turn or cleanup phase.</p>
+<ol>
+  <li>Shuffle your discard pile to form a new deck.</li>
+  <li>Score Prestige based on your Project Track progress and resolve any On Project Release effects. </li>
+  <li>Move your Project Track marker back to the first space.</li>
+</ol>
+
+<h2>Game End</h2>
+<p>The game ends when one of the following conditions is met:</p>
+<ul>
+  <li>A player reaches the Prestige point threshold (based on player count).</li>
+  <li>The Prestige Employee deck runs out.</li>
+  <li>Any two other Market decks run out.</li>
+  <li>Either of the Assignment decks run out.</li>
+</ul>
+<p>Play proceeds until the start player's turn would begin again, ensuring each player has the same number of turns.  In case of any of the decks running out, no replacement is provided. At the end of the game, players add end-of-game Prestige points from their decks to their current Prestige. The player with the highest final score wins. In case of a tie, the player who completed more Features wins.</p>
+
+<h2>Immediate Win Condition</h2>
+<p>If a player generates a Budget of 50, they immediately win the game.</p>
+
+<h2>Market</h2>
+<p>The Market has multiple slots for each Employee type:</p>
+<ul>
+  <li>Junior Employees: Most likely 2x2 slots</li>
+  <li>Senior Employees: Most likely 2x3 slots</li>
+  <li>Prestige Employees: A single slot</li>
+</ul>
+<p>Slots are refilled from the appropriate deck when purchased.</p>
+
+</body>
+</html>

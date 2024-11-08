@@ -38,7 +38,7 @@ const BackOfficeEmployeeCard: React.FC<BackOfficeEmployeeCardProps> = ({ employe
         {/* Photo */}
         <div className={styles.photo}>
           <img
-            src={employee.photoSrc}
+            src={"images/backoffice/"+employee.photoSrc}
             alt={'Employee Headshot'}
           />
         </div>

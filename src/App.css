@@ -1,4 +1,11 @@
-.wrapper {
+.wrapper section{
   display: flex;
   flex-wrap: wrap;
+}
+
+body {
+  font-family: 'Iosevka Web', monospace;
+  font-variant: small-caps;
+  font-optical-sizing: auto;
+  background-color: #ffffff;
 }
